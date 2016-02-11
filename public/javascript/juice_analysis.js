@@ -14,7 +14,6 @@ var per_juice_consumption = function(){
 			}
 		}
 		if($('#per_juice_info')[0].innerHTML == 'juice according consumption'){
-			// console.log(juice_info_for_pie[0]['value'])
 			// juiceConsumption(juice_info_for_bar)
 			pie_chart(juice_info_for_pie,"pie chart representation of juice consumption")
 		}
@@ -69,3 +68,35 @@ var juiceConsumption = function(data){
 		.text(function(d, i){ return d.name})
 }
 
+var pie_chart = function(data, title){
+	d3.selectAll('svg').remove();
+	var pie = new d3pie("chart", {
+		"header": {
+			"title": {
+				"text": title,
+			}
+		},
+		"size": {
+			"canvasHeight": 700,
+			"canvasWidth": 1300,
+			"pieOuterRadius": 200,
+			"pieInnerRadius": 150
+		},
+		"data": {
+			"content":data
+		},
+		"labels": {
+			"outer": {
+				"pieDistance": 80
+			},
+			"inner" : {
+				"format": "percentage"
+			}
+		},
+		"tooltips": {
+	    	"enabled": true,
+	    	"type": "placeholder",
+	    	"string":"Quantity={value}"
+	  	}
+	});
+}
