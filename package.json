@@ -1,0 +1,20 @@
+{
+  "name": "juice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "d3.v3.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-aadi/juice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-aadi/juice/issues"
+  },
+  "homepage": "https://github.com/A-aadi/juice#readme"
+}
